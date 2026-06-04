@@ -3,6 +3,7 @@ Thumbs.db
 *.log
 .vscode/
 .cursor/
+assets/pdf/homeworld.pdf
 scripts/
 node_modules/
 package-lock.json
