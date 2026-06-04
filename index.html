@@ -119,8 +119,14 @@
 
         <div class="teaser-panel teaser-panel--generation">
           <h3 class="teaser-panel__title">Whole-home Scene Generation</h3>
-          <div class="teaser-panel__visual">
-            <img src="assets/images/teaser-right.webp" alt="Whole-home scene generation: floorplan and furnished room renders" decoding="async" fetchpriority="high" />
+          <div class="teaser-panel__visual img-loadable">
+            <div class="img-loadable__frame">
+              <div class="img-loadable__spinner" role="status" aria-live="polite">
+                <span class="img-loadable__spinner-ring" aria-hidden="true"></span>
+                <span class="img-loadable__spinner-text">Loading…</span>
+              </div>
+              <img src="assets/images/teaser-right.webp" alt="Whole-home scene generation: floorplan and furnished room renders" decoding="async" fetchpriority="high" />
+            </div>
           </div>
         </div>
       </div>
