@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#16213e"/>
+  <rect x="40" y="40" width="720" height="520" rx="8" fill="none" stroke="#4a5568" stroke-width="2" stroke-dasharray="10 6"/>
+  <text x="400" y="290" font-family="Segoe UI, sans-serif" font-size="22" fill="#e2e8f0" text-anchor="middle">Fig. 5  Whole-Home Comparison</text>
+  <text x="400" y="325" font-family="Segoe UI, sans-serif" font-size="14" fill="#718096" text-anchor="middle">Placeholder</text>
+</svg>

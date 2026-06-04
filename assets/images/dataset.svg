@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1080" height="555" rx="12" fill="none" stroke="#4a5568" stroke-width="2" stroke-dasharray="12 8"/>
+  <text x="600" y="320" font-family="Segoe UI, system-ui, sans-serif" font-size="26" fill="#e2e8f0" text-anchor="middle">Fig. 2  Dataset Curation &amp; KD-Tree</text>
+  <text x="600" y="365" font-family="Segoe UI, system-ui, sans-serif" font-size="16" fill="#718096" text-anchor="middle">Replace with exported paper figure</text>
+</svg>
