@@ -378,6 +378,23 @@ section h2 {
   border-bottom: none;
 }
 
+.video-demo {
+  padding-top: 2.5rem;
+}
+
+.video-demo__figure {
+  margin: 1rem 0 0;
+}
+
+.video-demo__player {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: #1a202c;
+  vertical-align: middle;
+}
+
 .teaser-scaler {
   width: 100%;
   overflow: hidden;
