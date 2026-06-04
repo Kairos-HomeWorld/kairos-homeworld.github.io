@@ -5,3 +5,11 @@ Thumbs.db
 .cursor/
 assets/pdf/
 scripts/
+node_modules/
+package-lock.json
+package.json
+assets/images/teaser.png
+assets/images/teaser-generation.png
+assets/images/teaser-datasets.png
+assets/images/teaser-furnished-card.png
+assets/images/teaser-floorplan-card.png
