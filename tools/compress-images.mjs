@@ -4,7 +4,6 @@ import path from "path";
 
 const DIR = "assets/images";
 
-/** Page images: max width + WebP companion */
 const TARGETS = [
   { file: "teaser-right.png", maxW: 1100 },
   { file: "method.png", maxW: 1100 },
