@@ -705,15 +705,15 @@ section h2 {
 
 .img-loadable__frame {
   position: relative;
-  min-height: 12rem;
-  background: linear-gradient(110deg, #edf2f7 8%, #e2e8f0 18%, #edf2f7 33%);
-  background-size: 200% 100%;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .img-loadable.is-loading .img-loadable__frame {
+  min-height: 12rem;
+  background: linear-gradient(110deg, #edf2f7 8%, #e2e8f0 18%, #edf2f7 33%);
+  background-size: 200% 100%;
   animation: img-shimmer 1.4s ease-in-out infinite;
 }
 
@@ -755,8 +755,9 @@ section h2 {
 }
 
 .img-loadable.is-loaded .img-loadable__frame {
+  min-height: 0;
   animation: none;
-  background: var(--surface);
+  background: transparent;
 }
 
 .img-loadable.is-loaded .img-loadable__spinner {
