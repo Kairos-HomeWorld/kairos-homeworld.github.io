@@ -21,6 +21,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   background: var(--bg);
@@ -768,12 +780,171 @@ footer a {
   color: var(--accent);
 }
 
+/* Mobile: fluid layout instead of transform scale (smoother + readable) */
+@media (max-width: 900px) {
+  .hero-title__brand-scaler,
+  .affiliation-logos-scaler,
+  .teaser-scaler,
+  .teaser-showcase {
+    container-type: normal;
+  }
+
+  .hero-title__brand-scaler {
+    height: auto;
+    max-height: none;
+  }
+
+  .hero-title__brand-scaler__inner {
+    width: 100%;
+    max-width: 518px;
+    transform: none;
+  }
+
+  .hero-title__brand-scaler__inner img {
+    width: 100%;
+    height: auto;
+    max-height: 74px;
+  }
+
+  .hero .subtitle {
+    font-size: 1.05rem;
+    line-height: 1.45;
+    padding: 0 0.25rem;
+  }
+
+  .hero .authors {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 0.35rem 0.45rem;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  .hero .affiliations {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    padding: 0 0.5rem;
+  }
+
+  .hero .note {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+
+  .affiliation-logos-scaler {
+    height: auto;
+    max-height: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .affiliation-logos-scaler__inner {
+    width: 100%;
+    transform: none;
+  }
+
+  .affiliation-logos {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  .affiliation-logos img {
+    height: 44px;
+    max-width: min(42vw, 200px);
+  }
+
+  .affiliation-logos img.affiliation-logos__ace {
+    height: 52px;
+    max-width: min(72vw, 280px);
+  }
+
+  main {
+    padding: 0 1rem 3rem;
+  }
+
+  .teaser-scaler {
+    height: auto;
+    max-height: none;
+  }
+
+  .teaser-scaler__inner {
+    width: 100%;
+    transform: none;
+  }
+
+  .teaser-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .teaser-panel--generation {
+    order: -1;
+  }
+
+  .teaser-panel--datasets {
+    order: 1;
+  }
+
+  .dataset-card {
+    grid-template-columns: 72px 1fr;
+    padding: 0.75rem;
+  }
+
+  .dataset-card__stat {
+    font-size: 1.45rem;
+  }
+
+  .dataset-card__name {
+    font-size: 0.68rem;
+  }
+
+  .teaser-panel__visual {
+    min-height: 200px;
+  }
+
+  .teaser-panel__visual img {
+    height: auto;
+    max-height: 280px;
+  }
+
+  section h2 {
+    font-size: 1.45rem;
+  }
+
+  .keypoints li {
+    padding-left: 2.25rem;
+    font-size: 0.92rem;
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
-    padding: 3rem 1rem 2.5rem;
+    padding: 2.5rem 0.85rem 2rem;
+  }
+
+  .hero-title__project {
+    font-size: clamp(2.25rem, 12vw, 3rem);
+  }
+
+  .buttons {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.88rem;
+    padding: 0.55rem 1rem;
   }
 
   section {
     padding: 2rem 0;
+  }
+
+  #bibtex pre {
+    font-size: 0.78rem;
+    padding: 1rem;
   }
 }
