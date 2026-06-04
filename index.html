@@ -188,8 +188,14 @@
 
     <section id="pipeline">
       <h2>Method</h2>
-      <figure class="figure figure--method">
-        <img src="assets/images/method.webp" alt="Four-stage whole-home indoor scene generation pipeline" loading="lazy" decoding="async" />
+      <figure class="figure figure--method img-loadable">
+        <div class="img-loadable__frame">
+          <div class="img-loadable__spinner" role="status" aria-live="polite">
+            <span class="img-loadable__spinner-ring" aria-hidden="true"></span>
+            <span class="img-loadable__spinner-text">Loading…</span>
+          </div>
+          <img src="assets/images/method.webp" alt="Four-stage whole-home indoor scene generation pipeline" loading="lazy" decoding="async" />
+        </div>
         <figcaption>Figure 1 — Overview of the whole-home indoor scene generation pipeline.</figcaption>
       </figure>
       <ol class="pipeline-steps">
@@ -221,8 +227,14 @@
 
       <div class="result-block">
         <h3 class="result-block__title">Whole-home Samples</h3>
-        <figure class="figure figure--result">
-          <img src="assets/images/result-whole-home.webp" alt="Whole-home generation results across floorplans and furnished room views" loading="lazy" decoding="async" />
+        <figure class="figure figure--result img-loadable">
+          <div class="img-loadable__frame">
+            <div class="img-loadable__spinner" role="status" aria-live="polite">
+              <span class="img-loadable__spinner-ring" aria-hidden="true"></span>
+              <span class="img-loadable__spinner-text">Loading…</span>
+            </div>
+            <img src="assets/images/result-whole-home.webp" alt="Whole-home generation results across floorplans and furnished room views" loading="lazy" decoding="async" />
+          </div>
           <figcaption>
             The perspective views in the bottom row correspond to the numbered viewpoints marked on the floorplans above.
           </figcaption>
@@ -231,8 +243,14 @@
 
       <div class="result-block">
         <h3 class="result-block__title">Functional Room Samples</h3>
-        <figure class="figure figure--result">
-          <img src="assets/images/result-function-rooms.webp" alt="Generated functional rooms: living room, bedroom, bathroom, and kitchen" loading="lazy" decoding="async" />
+        <figure class="figure figure--result img-loadable">
+          <div class="img-loadable__frame">
+            <div class="img-loadable__spinner" role="status" aria-live="polite">
+              <span class="img-loadable__spinner-ring" aria-hidden="true"></span>
+              <span class="img-loadable__spinner-text">Loading…</span>
+            </div>
+            <img src="assets/images/result-function-rooms.webp" alt="Generated functional rooms: living room, bedroom, bathroom, and kitchen" loading="lazy" decoding="async" />
+          </div>
           <figcaption>
             For each room, the view inside the red dashed box below is a zoom-in focused on manipulable objects.
           </figcaption>
@@ -260,5 +278,26 @@
     </p>
     <p style="margin-top: 0.5rem;">&copy; 2026 Karios-HomeWorld · Ace Robotics · CUHK MMLab · Shenzhen Loop Area Institute</p>
   </footer>
+  <script>
+    document.querySelectorAll(".img-loadable").forEach(function (block) {
+      var img = block.querySelector("img");
+      if (!img) return;
+      block.classList.add("is-loading");
+      function done() {
+        block.classList.remove("is-loading");
+        block.classList.add("is-loaded");
+      }
+      if (img.complete && img.naturalWidth > 0) {
+        done();
+      } else {
+        img.addEventListener("load", done, { once: true });
+        img.addEventListener("error", function () {
+          block.classList.add("is-error");
+          block.querySelector(".img-loadable__spinner-text").textContent = "Failed to load";
+          done();
+        }, { once: true });
+      }
+    });
+  </script>
 </body>
 </html>
