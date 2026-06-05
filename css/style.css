@@ -269,16 +269,22 @@ img {
 .buttons {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: 0.75rem;
   justify-content: center;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.6rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.35rem;
+  padding: 0.55rem 1.25rem;
+  box-sizing: border-box;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
+  line-height: 1.2;
   text-decoration: none;
   transition: background 0.15s, transform 0.1s;
 }
@@ -305,6 +311,7 @@ img {
   height: 1.35rem;
   flex-shrink: 0;
   opacity: 0.95;
+  display: block;
 }
 
 .btn--pdf .btn__text {
@@ -328,6 +335,31 @@ img {
 .btn--pdf .btn__format {
   font-weight: 700;
   letter-spacing: 0.06em;
+}
+
+.btn--arxiv {
+  background: #b31b1b;
+  color: #fff;
+  border: 1px solid #9a1616;
+}
+
+.btn--arxiv:hover {
+  background: #9a1616;
+  text-decoration: none;
+}
+
+.btn--arxiv .btn__row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--arxiv .btn__arxiv-logo {
+  display: block;
+  height: 2.05rem;
+  width: auto;
+  max-width: 5.75rem;
+  margin: 0;
 }
 
 .btn.secondary {

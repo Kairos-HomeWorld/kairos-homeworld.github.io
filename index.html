@@ -61,15 +61,20 @@
       </div>
     </div>
     <nav class="buttons">
-      <a class="btn primary btn--pdf" href="assets/pdf/homeworld-mini.pdf" target="_blank" rel="noopener" title="PDF, 8.6 MB">
+      <a class="btn primary btn--pdf" href="assets/pdf/homeworld-mini.pdf" target="_blank" rel="noopener" title="PDF, 8.7 MB">
         <span class="btn__row">
           <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM8 12h8v2H8v-2zm0 4h5v2H8v-2z"/>
           </svg>
           <span class="btn__text">
             <span class="btn__title">Technical Report</span>
-            <span class="btn__meta"><span class="btn__format">PDF</span> · 8.6 MB</span>
+            <span class="btn__meta"><span class="btn__format">PDF</span> · 8.7 MB</span>
           </span>
+        </span>
+      </a>
+      <a class="btn btn--arxiv" href="https://arxiv.org/abs/2606.06390" target="_blank" rel="noopener" title="arXiv:2606.06390">
+        <span class="btn__row">
+          <img class="btn__arxiv-logo" src="assets/images/arxiv-logo-one-color-white.svg" alt="arXiv" decoding="async" />
         </span>
       </a>
       <span class="btn disabled">Code (Coming Soon)</span>
@@ -285,12 +290,15 @@
 
     <section id="bibtex">
       <h2>BibTeX</h2>
-      <pre><code>@article{li2026homeworld,
-  title   = {HomeWorld: A Unified Floorplan-to-Furnished Framework for Generating Controllable, Densely Interactive Whole-Home Scenes},
-  author  = {Li, Wenbo and Ju, Xiaoliang and Qin, Zipeng and Fang, Rongyao and Li, Hongsheng},
-  journal = {arXiv preprint},
-  year    = {2026},
-  note    = {Project page: https://kairos-homeworld.github.io/}
+      <pre><code>@misc{li2026homeworld,
+  title         = {HomeWorld: A Unified Floorplan-to-Furnished Framework for Generating Controllable, Densely Interactive Whole-Home Scenes},
+  author        = {Wenbo Li and Xiaoliang Ju and Zipeng Qin and Rongyao Fang and Hongsheng Li},
+  year          = {2026},
+  eprint        = {2606.06390},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2606.06390},
+  note          = {Project page: https://kairos-homeworld.github.io/}
 }</code></pre>
     </section>
   </main>
