@@ -299,14 +299,18 @@ img {
   text-decoration: none;
 }
 
-.btn--pdf .btn__row {
+.btn--pdf .btn__row,
+.btn--github .btn__row,
+.btn--dataset .btn__row {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   text-align: left;
 }
 
-.btn--pdf .btn__icon {
+.btn--pdf .btn__icon,
+.btn--github .btn__icon,
+.btn--dataset .btn__icon {
   width: 1.35rem;
   height: 1.35rem;
   flex-shrink: 0;
@@ -314,18 +318,24 @@ img {
   display: block;
 }
 
-.btn--pdf .btn__text {
+.btn--pdf .btn__text,
+.btn--github .btn__text,
+.btn--dataset .btn__text {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
   line-height: 1.2;
 }
 
-.btn--pdf .btn__title {
+.btn--pdf .btn__title,
+.btn--github .btn__title,
+.btn--dataset .btn__title {
   font-size: 0.95rem;
 }
 
-.btn--pdf .btn__meta {
+.btn--pdf .btn__meta,
+.btn--github .btn__meta,
+.btn--dataset .btn__meta {
   font-size: 0.72rem;
   font-weight: 500;
   opacity: 0.88;
