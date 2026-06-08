@@ -29,7 +29,7 @@
       <span class="author">Wenbo Li<sup>1,2,*</sup></span>
       <span class="author-sep" aria-hidden="true">·</span>
       <span class="author">
-        Xiaoliang Ju<sup>1,2,*,†<a class="corr-mark" href="mailto:akira@link.cuhk.edu.hk" title="Corresponding author: akira@link.cuhk.edu.hk" aria-label="Corresponding author"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a></sup>
+        Xiaoliang Ju<sup>1,2,*,†<a class="corr-mark" href="#contact" title="Corresponding author" aria-label="Corresponding author contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a></sup>
       </span>
       <span class="author-sep" aria-hidden="true">·</span>
       <span class="author">Zipeng Qin<sup>1,2,*</sup></span>
@@ -37,7 +37,7 @@
       <span class="author">Rongyao Fang<sup>2</sup></span>
       <span class="author-sep" aria-hidden="true">·</span>
       <span class="author">
-        Hongsheng Li<sup>2,1,3<a class="corr-mark" href="mailto:hsli@ee.cuhk.edu.hk" title="Corresponding author: hsli@ee.cuhk.edu.hk" aria-label="Corresponding author"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a></sup>
+        Hongsheng Li<sup>2,1,3<a class="corr-mark" href="#contact" title="Corresponding author" aria-label="Corresponding author contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a></sup>
       </span>
     </p>
     <p class="affiliations">
@@ -48,7 +48,7 @@
     <p class="note">
       <sup>*</sup>Equal contribution &nbsp;·&nbsp;
       <sup>†</sup>Project lead &nbsp;·&nbsp;
-      <sup><a class="corr-mark" href="mailto:akira@link.cuhk.edu.hk" aria-label="Corresponding author"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a></sup>
+      <sup><a class="corr-mark" href="#contact" title="Corresponding author" aria-label="Corresponding author contact"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a></sup>
       Corresponding author
     </p>
     <div class="affiliation-logos-scaler" aria-label="Affiliation logos">
@@ -323,11 +323,11 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="contact">
     <p>
       Correspondence:
-      <a href="mailto:akira@link.cuhk.edu.hk">Xiaoliang Ju</a>,
-      <a href="mailto:hsli@ee.cuhk.edu.hk">Hongsheng Li</a>
+      <a href="#" class="js-email" data-u="arika" data-d="kh.ude.khuc.knil">Xiaoliang Ju</a>,
+      <a href="#" class="js-email" data-u="ilsh" data-d="kh.ude.khuc.ee">Hongsheng Li</a>
     </p>
     <p style="margin-top: 0.5rem;">&copy; 2026 Karios-HomeWorld · Ace Robotics · CUHK MMLab · Shenzhen Loop Area Institute</p>
   </footer>
@@ -350,6 +350,20 @@
           done();
         }, { once: true });
       }
+    });
+
+    function rev(s) {
+      return s.split("").reverse().join("");
+    }
+
+    document.querySelectorAll(".js-email").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        var u = link.getAttribute("data-u");
+        var d = link.getAttribute("data-d");
+        if (!u || !d) return;
+        window.location.href = "mailto:" + rev(u) + "@" + rev(d);
+      });
     });
   </script>
 </body>
